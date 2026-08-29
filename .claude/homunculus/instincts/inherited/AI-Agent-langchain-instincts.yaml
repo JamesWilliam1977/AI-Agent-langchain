@@ -1,0 +1,367 @@
+# Instincts generated from https://github.com/JamesWilliam1977/AI-Agent-langchain
+# Generated: 2026-05-01T00:31:32.828Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: AI-Agent-langchain-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/JamesWilliam1977/AI-Agent-langchain
+---
+
+# AI Agent Langchain Commit Length
+
+## Action
+
+Write moderate-length commit messages (~60 characters)
+
+## Evidence
+
+- Average commit message length: 60 chars
+- Based on 5 commits
+
+---
+id: AI-Agent-langchain-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/JamesWilliam1977/AI-Agent-langchain
+---
+
+# AI Agent Langchain Naming Files
+
+## Action
+
+Use snake_case naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: snake_case
+
+---
+id: AI-Agent-langchain-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/JamesWilliam1977/AI-Agent-langchain
+---
+
+# AI Agent Langchain Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: AI-Agent-langchain-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/JamesWilliam1977/AI-Agent-langchain
+---
+
+# AI Agent Langchain Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: AI-Agent-langchain-test-naming
+trigger: "when creating a test file"
+confidence: 0.85
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/JamesWilliam1977/AI-Agent-langchain
+---
+
+# AI Agent Langchain Test Naming
+
+## Action
+
+Name test files using the pattern: *.test.ts
+
+## Evidence
+
+- File pattern: *.test.ts
+- Consistent across test files
+
+---
+id: AI-Agent-langchain-workflow-library-release-version-bump
+trigger: "when doing library release version bump"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/JamesWilliam1977/AI-Agent-langchain
+---
+
+# AI Agent Langchain Workflow Library Release Version Bump
+
+## Action
+
+Follow the library-release-version-bump workflow:
+1. Update the version number in pyproject.toml for the relevant package.
+2. Update the version number in __init__.py if present.
+3. Update lock files (uv.lock) if dependencies are involved.
+4. Summarize key changes in the commit message.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: libs/*/pyproject.toml, libs/*/__init__.py, libs/*/uv.lock
+
+---
+id: AI-Agent-langchain-workflow-feature-or-fix-with-targeted-tests
+trigger: "when doing feature or fix with targeted tests"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/JamesWilliam1977/AI-Agent-langchain
+---
+
+# AI Agent Langchain Workflow Feature Or Fix With Targeted Tests
+
+## Action
+
+Follow the feature-or-fix-with-targeted-tests workflow:
+1. Modify or add implementation files (e.g., in core, middleware, or integration folders).
+2. Add or update unit test files in the corresponding tests/unit_tests/ directory.
+3. Describe the change, rationale, and test plan in the commit message.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: libs/*/*/*.py, libs/*/tests/unit_tests/**/*.py
+
+---
+id: ai-agent-langchain-instinct-naming-conventions
+trigger: "When creating or renaming files, functions, classes, or constants in Python code"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: JamesWilliam1977/AI-Agent-langchain
+---
+
+# Ai Agent Langchain Instinct Naming Conventions
+
+## Action
+
+Use snake_case for files, camelCase for functions, PascalCase for classes, and SCREAMING_SNAKE_CASE for constants
+
+## Evidence
+
+- Pattern in namingConventions: files (snake_case), functions (camelCase), classes (PascalCase), constants (SCREAMING_SNAKE_CASE)
+
+---
+id: ai-agent-langchain-instinct-import-style
+trigger: "When importing modules in Python code"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: JamesWilliam1977/AI-Agent-langchain
+---
+
+# Ai Agent Langchain Instinct Import Style
+
+## Action
+
+Use relative imports rather than absolute imports
+
+## Evidence
+
+- Pattern in codeStyle: importStyle is relative
+
+---
+id: ai-agent-langchain-instinct-export-style
+trigger: "When exporting functions or classes from a module"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: JamesWilliam1977/AI-Agent-langchain
+---
+
+# Ai Agent Langchain Instinct Export Style
+
+## Action
+
+Use named exports rather than default exports
+
+## Evidence
+
+- Pattern in codeStyle: exportStyle is named
+
+---
+id: ai-agent-langchain-instinct-test-file-pattern
+trigger: "When adding or updating test files"
+confidence: 0.7
+domain: testing
+source: repo-analysis
+source_repo: JamesWilliam1977/AI-Agent-langchain
+---
+
+# Ai Agent Langchain Instinct Test File Pattern
+
+## Action
+
+Name test files using the pattern *.test.ts
+
+## Evidence
+
+- Pattern in testing: filePattern is *.test.ts
+
+---
+id: ai-agent-langchain-instinct-unit-tests-location
+trigger: "When adding or updating unit tests for a feature or fix"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: JamesWilliam1977/AI-Agent-langchain
+---
+
+# Ai Agent Langchain Instinct Unit Tests Location
+
+## Action
+
+Place unit test files in libs/*/tests/unit_tests/ directory
+
+## Evidence
+
+- Pattern in workflows: feature-or-fix-with-targeted-tests, filesInvolved includes libs/*/tests/unit_tests/**/*.py
+
+---
+id: ai-agent-langchain-instinct-unit-tests-type
+trigger: "When writing tests for new code"
+confidence: 0.7
+domain: testing
+source: repo-analysis
+source_repo: JamesWilliam1977/AI-Agent-langchain
+---
+
+# Ai Agent Langchain Instinct Unit Tests Type
+
+## Action
+
+Write unit tests (not integration or end-to-end tests)
+
+## Evidence
+
+- Pattern in testing: testTypes includes unit
+
+---
+id: ai-agent-langchain-instinct-commit-prefix
+trigger: "When writing a commit message"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: JamesWilliam1977/AI-Agent-langchain
+---
+
+# Ai Agent Langchain Instinct Commit Prefix
+
+## Action
+
+Prefix the commit message with feat, fix, or release as appropriate
+
+## Evidence
+
+- Pattern in commits: prefixes include feat, fix, release
+- Seen in commit: 'feat(langchain): add `respond` decision to HITL middleware (#37095)'
+
+---
+id: ai-agent-langchain-instinct-commit-length
+trigger: "When composing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: JamesWilliam1977/AI-Agent-langchain
+---
+
+# Ai Agent Langchain Instinct Commit Length
+
+## Action
+
+Keep commit messages concise, around 60 characters on average
+
+## Evidence
+
+- Pattern in commits: averageLength is 60
+
+---
+id: ai-agent-langchain-instinct-commit-detail
+trigger: "When describing a change in a commit message"
+confidence: 0.8
+domain: git
+source: repo-analysis
+source_repo: JamesWilliam1977/AI-Agent-langchain
+---
+
+# Ai Agent Langchain Instinct Commit Detail
+
+## Action
+
+Include the scope (e.g., core, langchain, fireworks) in parentheses after the prefix
+
+## Evidence
+
+- Seen in commit: 'fix(core): preserve structured `inputs` on tool runs in tracers (#37108)'
+
+---
+id: ai-agent-langchain-instinct-library-release-version-bump
+trigger: "When releasing a new version of a library after changes have been merged"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: JamesWilliam1977/AI-Agent-langchain
+---
+
+# Ai Agent Langchain Instinct Library Release Version Bump
+
+## Action
+
+Update pyproject.toml, __init__.py, and uv.lock in the relevant libs/* folder, and summarize key changes in the commit message
+
+## Evidence
+
+- Workflow: library-release-version-bump
+- Pattern in files: libs/*/pyproject.toml, libs/*/__init__.py, libs/*/uv.lock
+
+---
+id: ai-agent-langchain-instinct-feature-or-fix-with-targeted-tests
+trigger: "When adding a new feature or bugfix"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: JamesWilliam1977/AI-Agent-langchain
+---
+
+# Ai Agent Langchain Instinct Feature Or Fix With Targeted Tests
+
+## Action
+
+Modify or add implementation files and add or update corresponding unit test files in the same commit, describing the change, rationale, and test plan in the commit message
+
+## Evidence
+
+- Workflow: feature-or-fix-with-targeted-tests
+- Pattern in files: libs/*/*/*.py, libs/*/tests/unit_tests/**/*.py
+
